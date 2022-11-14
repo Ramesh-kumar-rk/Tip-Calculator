@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tip calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png">
+    <!-- word font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Zilla+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- number font -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/10012be71f.js" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="nav">
+      <div class="top-nav">
+        <div class="heading">
+          <p>Tip Calculator</p>
+        </div>
+        <div class="dark-mode">
+          <label>
+           <input type="checkbox">
+           <span class='check' onclick="darktheme()"></span>
+         </label>
+        </div>
+      </div>
+    </div>
+    <div class="main-relative">
+      <div class="main-container">
+        <div class="left-container">
+          <p class="bill">Bill Amount</p>
+          <div class="bill-amount">
+            <span><i class="fa-solid fa-indian-rupee-sign"></i></span>
+            <input id="bill-amount" type="number" name="" value="">
+            <p class="warning" id="bill-warning">Please enter Bill Amount</p>
+          </div>
+          <p class="tip">Select Tip %</p>
+          <div class="tip-percentage">
+            <span class="tipAmount" onclick="tipBlock(0)">5%</span>
+            <span class="tipAmount" onclick="tipBlock(1)">10%</span>
+            <span class="tipAmount" onclick="tipBlock(2)">15%</span>
+            <span class="tipAmount" onclick="tipBlock(3)">20%</span>
+          </div>
+          <div class="custom-section">
+            <div class="custom-div" onclick="custom()">Custom</div>
+            <input class="custom-input" type="number" name="" value="">
+          </div>
+          <p class="warning" id="tip-warning">Please Select or Enter Tip</p>
+          <div class="people-section">
+            <p>Number of People</p>
+            <div class="people-input">
+              <span><i class="fa-solid fa-people-group"></i></span>
+              <input id="peopleCount" type="number" name="" value="">
+            </div>
+
+          </div>
+          <p class="warning" id="peopleWarning">Please enter valid Number</p>
+          <button onclick="calculate()"class="btn-calculate"type="button" name="button">Calculate</button>
+        </div>
+        <div class="right-container">
+          <div class="right">
+            <div class="tip-person">
+              <div class="right-text">
+                <p class="right-t">Tip Amount</p>
+                <span>/per person</span>
+              </div>
+              <div class="amount">
+                0.00
+              </div>
+            </div>
+            <div class="total-person">
+              <div class="right-text">
+                <p class="right-t">Total Amount</p>
+                <span>/per person</span>
+              </div>
+              <div class="amount">
+                0.00
+              </div>
+            </div>
+            <div class="btn">
+              <button class="btn-reset" onclick="reset()" type="button" name="button">Reset</button>
+            </div>
+            <p class="notice">*The Shared Bill Tip Calculator considers the cost of the service, number of people,
+              and chosen tip percentage to calculate the tip per person, as well as the total cost per person.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>
